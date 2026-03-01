@@ -1,0 +1,217 @@
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERMINAL | LACE_NX</title>
+    <style>
+        :root {
+            --neon-green: #00ff41;
+            --dark-bg: #0a0a0a;
+            --terminal-font: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--neon-green);
+            font-family: var(--terminal-font);
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Matrix Background Effect */
+        #matrix-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            z-index: -1;
+            opacity: 0.15;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid var(--neon-green);
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+            background: rgba(0, 0, 0, 0.85);
+        }
+
+        header {
+            border-bottom: 1px solid var(--neon-green);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .glitch {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Social Icons Section */
+        .social-nodes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .node {
+            border: 1px solid var(--neon-green);
+            padding: 10px;
+            text-decoration: none;
+            color: var(--neon-green);
+            font-size: 0.9rem;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .node:hover {
+            background: var(--neon-green);
+            color: black;
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        /* Gallery System */
+        .gallery-trigger {
+            margin-top: 30px;
+            cursor: pointer;
+            border: 2px dashed var(--neon-green);
+            padding: 20px;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        .gallery-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 40px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .gallery-overlay img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid var(--neon-green);
+            filter: grayscale(100%) sepia(100%) hue-rotate(90deg);
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .gallery-overlay img:hover {
+            filter: none;
+            transform: scale(1.05);
+        }
+
+        .close-btn {
+            position: fixed;
+            top: 20px; right: 20px;
+            color: var(--neon-green);
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            .container { padding: 10px; }
+            .node { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="matrix-canvas"></canvas>
+
+<div class="container">
+    <header>
+        <div class="glitch">> ACCESS_GRANTED: USER_LAHCENE</div>
+        <p style="font-size: 0.8rem;">IP: 192.168.1.103 | STATUS: ENCRYPTED</p>
+    </header>
+
+    <section>
+        <p>[+] SOCIAL_DATA_LINKS:</p>
+        <div class="social-nodes">
+            <a href="https://www.facebook.com/ahcen.305505" class="node" target="_blank">[ FACEBOOK ]</a>
+            <a href="https://www.instagram.com/lace_nx__ch?igsh=MWZydzVtenQ1aTdxbA==" class="node" target="_blank">[ INSTAGRAM ]</a>
+            <a href="https://www.tiktok.com/@lace_nx___ch?_r=1&_t=ZS-94JmAqGGYw0" class="node" target="_blank">[ TIKTOK ]</a>
+            <a href="mailto:lahcenchebedden50@gmail.com" class="node">[ EMAIL_SENDER ]</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="gallery-trigger" onclick="toggleGallery()">
+            [!!!] CLICK TO DECRYPT_DATABASE (IMAGES) [!!!]
+        </div>
+    </section>
+</div>
+
+<div id="gallery" class="gallery-overlay">
+    <span class="close-btn" onclick="toggleGallery()">[ X ]</span>
+    <img src="https://www.dropbox.com/scl/fi/dydbzs6tjgd4nac9umjl6/5992078814076849762_121.jpg?rlkey=yveyg6jh94jo5onpqmqfn42u6&st=7tcjzv54&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/ifplxlu51rr068znlhh6e/5992078814076849687_121.jpg?rlkey=dlyfhurcqbazn02x78g6ccwzj&st=i5oxn2o2&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/r2r1v6yi5khpkkwk2ia6g/5992078814076849479_121.jpg?rlkey=femn53xyx7xl8gxi8rb3pnfhk&st=fj3rkixu&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/sk64sp56wluzuplcq4p11/5992078814076849668_121.jpg?rlkey=3t6c70cv2ix4lvq0bw3nsyhq1&st=i8n67b6l&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/nvq7benuyi57ilpep41u2/5992078814076849469_121.jpg?rlkey=pxwobo5ybyxks0yr53j0o4rn5&st=p3b5zwfu&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/bhuq3fp2p224xd9wout4o/5969672725607860574_121.jpg?rlkey=rcy9oo2rkf4jx6tl118fseqgs&st=s81wc3kt&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/db21byjw516now99xy80s/5895486292374964040_121.jpg?rlkey=sg9nd4mvzoh32ex0b6itw0mx8&st=ip8pmbih&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/13mf2fk4qiey2mylp3om1/ChatGPT-Image-26-2026-09_00_37.png?rlkey=de6e83hospcyvzvn3ui8xopf6&st=fdyrj57l&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/s46zqq2ipjyjlbhzqfeqi/ChatGPT-Image-25-2026-07_46_57.png?rlkey=0qpyrivj0o7n7ciwqzbll1gjp&st=3bugntxh&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/j1mm5evh7hzuxaebrjzml/ChatGPT-Image-28-2026-06_15_42.png?rlkey=sw56g7zh4laczgfwu4398h56w&st=v8js1esa&dl=1" alt="data">
+    <img src="https://www.dropbox.com/scl/fi/5o9corb9l2dk7s87tn5oe/ChatGPT-Image-27-2026-08_13_11.png?rlkey=wbq4ngikfvd2xdlm8crgv9cny&st=167vzqbv&dl=1" alt="data">
+</div>
+
+<script>
+    // Matrix Rain Effect
+    const canvas = document.getElementById('matrix-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = [];
+
+    for (let x = 0; x < columns; x++) drops[x] = 1;
+
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#0F0';
+        ctx.font = fontSize + 'px monospace';
+
+        for (let i = 0; i < drops.length; i++) {
+            const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+            drops[i]++;
+        }
+    }
+    setInterval(drawMatrix, 30);
+
+    // Gallery Toggle Logic
+    function toggleGallery() {
+        const gallery = document.getElementById('gallery');
+        gallery.style.display = (gallery.style.display === 'grid') ? 'none' : 'grid';
+    }
+</script>
+
+</body>
+</html>
+

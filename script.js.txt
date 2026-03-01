@@ -1,0 +1,4 @@
+function toggleAbout() {
+    const about = document.getElementById('about-overlay');
+    about.style.display = (about.style.display === 'block') ? 'none' : 'block';
+}

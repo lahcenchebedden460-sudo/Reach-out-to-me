@@ -1,0 +1,53 @@
+/* About Section */
+.about-trigger {
+    margin-top: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.click-text {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    animation: pulse 2s infinite;
+}
+
+.icon-box {
+    display: inline-block;
+    font-size: 3rem;
+    border: 2px solid var(--neon-green);
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.icon-box:hover {
+    background: var(--neon-green);
+    color: black;
+    box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* About Overlay */
+.about-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    padding: 40px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--neon-green);
+    padding: 30px;
+    background: black;
+    box-shadow: 0 0 15px rgba(0,255,65,0.3);
+}
+
+.about-content pre {
+    white-space: pre-wrap;
+    font-family: var(--terminal-font);
+}
